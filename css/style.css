@@ -1,0 +1,141 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+* {
+  box-sizing: border-box; /* allows us to tell the browser how to measure our elements.  Now the width property includes content, padding, and border, instead of just the content*/
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+	color: #ffffff;
+	font-family: roboto, sans-serif;
+}
+
+header{
+	background-image: url("../images/bg.jpg");
+	height: 600px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #FFF;
+	font-weight: 900;
+	font-size: 40px;
+}
+
+ h2{
+ 	color: rgb(16,204,114);
+ 	font-weight: 900;
+ 	font-size: 36px;
+ }
+
+ .primary-btn {
+	background-color: rgb(16,204,114);
+	color: white;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 900;
+	padding: 10px;
+	margin: 15px;
+	width: 300px;
+
+}
+
+
+/*a {
+  text-decoration: none;
+}*/
+
+h3{
+	color: #033048;
+	padding: 20px 15px;
+	margin: 20px 10px 0px 10px;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+p{
+	color: #033048;
+	padding: 15px;
+	margin: 16px;
+	font-weight: 300;
+	font-size: 14px;	
+}
+
+blockquote{ 
+	color: rgb(142,149,146);
+	font-weight: 300 italic;
+	font-size: 18px;
+	margin: 5px;
+	text-align: center;
+}
+
+cite{
+	color: rgb(142,149,146);
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.secondary-btn{
+	background-color: rgb(115,176,248);	
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 900;
+	padding: 12px;
+	margin:10px;
+	width: 200px;
+}
+
+
+footer{
+	background: rgb(242,244,246);
+	color: rgb(113,122,128);
+	text-align: center;
+	font-weight: 900;
+	font-size: 40px;
+}
+
+copyright{
+	font-size: 9px;
+	font-weight: 700;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+section{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+div{
+	flex: 1;
+	text-align: center;
+	align-items: center;
+}
+
+aside{
+	flex: 1;
+	padding: 10px 20px;
+	text-align: center;
+	display: relative;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
