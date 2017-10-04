@@ -17,46 +17,47 @@ Developer @GA in NYC
 /* BASE STYLES
 /*******************************************/
 
-body {
+body#page1{
 	color: #ffffff;
 	font-family: roboto, sans-serif;
 }
 
-header{
+#page1 header{
 	background-image: url("../images/bg.jpg");
 	height: 600px;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
-	color: #FFF;
+	background-repeat: no-repeat;	
+}
+
+.logo{
+    color: white;
 	font-weight: 900;
 	font-size: 40px;
 }
 
- h2{
+#page1 h2{
  	color: rgb(16,204,114);
  	font-weight: 900;
  	font-size: 36px;
  }
 
- .primary-btn {
+ #page1 .primary-btn {
 	background-color: rgb(16,204,114);
 	color: white;
 	border-radius: 5px;
 	font-size: 14px;
 	font-weight: 900;
-	padding: 10px;
+	padding: 20px;
 	margin: 15px;
-	width: 300px;
-
+	width: 300px;	
 }
 
-
-/*a {
+a {
   text-decoration: none;
-}*/
+}
 
-h3{
+#page1 h3{
 	color: #033048;
 	padding: 20px 15px;
 	margin: 20px 10px 0px 10px;
@@ -64,15 +65,32 @@ h3{
 	font-size: 20px;
 }
 
-p{
+#page1 p{
 	color: #033048;
 	padding: 15px;
 	margin: 16px;
 	font-weight: 300;
 	font-size: 14px;	
 }
+#page1 section{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
 
-blockquote{ 
+#page1 div{
+	text-align: center;
+	align-items: center;
+}
+
+#page1 aside{
+	flex: 1;
+	padding: 10px 20px;
+	text-align: center;
+	display: relative;
+}
+
+#page1 blockquote{ 
 	color: rgb(142,149,146);
 	font-weight: 300 italic;
 	font-size: 18px;
@@ -80,13 +98,13 @@ blockquote{
 	text-align: center;
 }
 
-cite{
+#page1 cite{
 	color: rgb(142,149,146);
 	font-size: 14px;
 	font-weight: 500;
 }
 
-.secondary-btn{
+#page1 .secondary-btn{
 	background-color: rgb(115,176,248);	
 	color: white;
 	text-align: center;
@@ -98,8 +116,15 @@ cite{
 	width: 200px;
 }
 
+#page1 #blue{
+	flex: 1;
+	align-items: center;
+	justify-content: space-around;
+}
 
-footer{
+
+
+#page1 footer{
 	background: rgb(242,244,246);
 	color: rgb(113,122,128);
 	text-align: center;
@@ -107,7 +132,7 @@ footer{
 	font-size: 40px;
 }
 
-copyright{
+#page1 small{
 	font-size: 9px;
 	font-weight: 700;
 }
@@ -116,25 +141,155 @@ copyright{
 /******************************************
 /* LAYOUT
 /*******************************************/
+body#page2 
+.container{
+	display: grid;
+	grid-row-gap: 30px;
+	grid-column-gap: 230x;
+	grid-template-rows: minmax(75px, auto) minmax(100px, auto) minmax(75px, auto);
+	grid-template-columns: 25% 50% 25%;
+	grid-template-areas: "a a a"
+						 "b c d"
+						 "e e e";
 
-section{
+}
+
+
+
+body#page2 .container header{
+	grid-area: a;
+	background-image: url("../images/bg.jpg");
 	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
+	flex-flow: row nowrap;
+    
 }
 
-div{
-	flex: 1;
-	text-align: center;
-	align-items: center;
+.container header .logo{
+	padding-left: 200px;
+}
+ .container header nav{
+	display: flex;
 }
 
-aside{
-	flex: 1;
-	padding: 10px 20px;
-	text-align: center;
-	display: relative;
+.container header nav ul{
+	display: flex;
+	color: white;
+	font-size: 20px;
+	padding-left: 250px;
+	margin-left: 200px;
+	
 }
+
+ .container header nav ul li{
+	display: flex;
+	padding-left: 50px;
+	margin-top: 30px;	
+
+}
+/*
+a:link{
+	text-decoration: none;
+} --i initally wrote this because based on the slides it said a:hover has to come after a:link but when I coded it the hover effect still wouldn't apply ;
+*/
+
+.container header nav ul li a:hover{
+  color: blue;
+}
+
+body#page2 .container section.left{
+	grid-area: b;
+	justify-self: center;
+	margin-bottom: 600px;
+	padding-bottom:250px;
+}
+
+body#page2 section{
+	flex-direction: column;
+	align-content: start;
+	
+}
+.container section.left h2{
+	color: black;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: left;
+	padding-left: 20px;
+	margin: 40px 0px 20px 18px;
+}
+
+.container section.left ul li{
+	color: gray;
+	text-align: left;
+}
+
+body#page2 .container section.middle{
+	grid-area: c;
+	flex-direction: column;
+	margin-top: 25px;
+	justify-content: start;
+}
+
+.container section.middle article h1{
+	font-weight: 900;
+	font-size: 28px;
+	text-align: left;
+
+}
+
+.container section.middle article small{
+	color: gray;
+	text-align: left;
+}
+
+.container section.middle article p{
+	text-align: left;
+	color: black;
+	flex-wrap: wrap;
+}
+
+.container section.middle img{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 200px;
+	margin-right: 20px;
+
+}
+body#page2 .container aside.right{
+	grid-area: d;
+	margin-bottom: 700px;
+
+}
+
+.container aside h2{
+	padding-right: 40px;
+	text-align: center;
+}
+
+ .container aside.right img{
+ 	display: block;
+	height: 200px;
+	padding: 10px;
+}
+
+body#page2 .container footer{
+	grid-area: e;
+	background: rgb(242,244,246);
+	text-align: center;
+}
+
+
+.container footer .logo {
+	color: gray;
+	font-weight: 700;
+	font-size: 40px;	
+}
+
+.container footer small{
+	color: gray;
+	font-weight: 300px;	
+}
+
+
 
 /******************************************
 /* ADDITIONAL STYLES
